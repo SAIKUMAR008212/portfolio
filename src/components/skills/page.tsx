@@ -3,28 +3,27 @@ import React from 'react'
 const skills = [
   { name: 'HTML', icon: '/html.png', color: '#E34F26' },
   { name: 'CSS', icon: '/css.png', color: '#1572B6' },
-  { name: 'Tailwind', icon: '/globe.svg', color: '#06B6D4' }, // Replace with tailwind icon if available
+  { name: 'Tailwind', icon: '/globe.svg', color: '#06B6D4' },
   { name: 'JavaScript', icon: '/js.png', color: '#F7DF1E' },
-  { name: 'TypeScript', icon: '/typescript.png', color: '#3178C6' },
+  { name: 'TypeScript', icon: '/typescript.png', color: '#3178C6'},
   { name: 'Node.js', icon: '/nodejs.png', color: '#339933' },
-  { name: 'MongoDB', icon: '/mongo-db.png', color: '#47A248' },
+  { name: 'MongoDB', icon: '/mongo-db.png', color:'#47A248'},
   { name: 'React.js', icon: '/react.png', color: '#61DAFB' },
   { name: 'Next.js', icon: '/nextjs.png', color: '#000000' },
-  { name: 'Express.js', icon: '/file.svg', color: '#000000' }, // Use actual express icon if available
+  { name: 'Express.js', icon: '/file.svg', color: '#000000'}, 
   { name:  'postgresql', icon: '/postgresql.png', color: '#336791' },
   
 ]
-
 export default function Skills() {
   return (
-    <section className="min-h-screen bg-gray-50 py-16 px-4">
+    <section className="min-h-screen bg-gray-10 py-16 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            Skills & <span className="text-indigo-600">Technologies</span>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
+            <span className="text-black-500 dark:text-white">Skills</span> & <span className="text-blue-900">Technologies</span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-220 max-w-2xl mx-auto">
             Showcasing My Expertise And Technical Proficiencies
           </p>
         </div>
@@ -34,12 +33,12 @@ export default function Skills() {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md hover:scale-105 transition-all duration-300 cursor-pointer group"
+              className="bg-white dark:bg-white/3 backdrop-blur-md rounded-4xl p-4 shadow-sm border border-gray-100 dark:border-gray-900 hover:shadow-md hover:scale-105 transition-all duration-300 cursor-pointer group"
             >
               <div className="flex flex-col items-center text-center space-y-3">
                 {/* Icon */}
                 <div 
-                  className="w-14 h-14 rounded-xl flex items-center justify-center shadow-inner overflow-hidden"
+                  className="w-14 h-11 rounded-xl flex items-center justify-center shadow-inner overflow-hidden"
                   style={{ backgroundColor: `${skill.color}15` }}
                 >
                   <img
@@ -50,7 +49,7 @@ export default function Skills() {
                 </div>
                 
                 {/* Skill Name */}
-                <h3 className="text-gray-800 font-semibold text-sm group-hover:text-indigo-600 transition-colors">
+                <h3 className="text-gray-200 font-semibold text-sm group-hover:text-indigo-700 transition-colors">
                   {skill.name}
                 </h3>
               </div>
