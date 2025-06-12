@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div>
       <Nav/>
-      <div id="home" className="pt-[4rem] w-full h-screen" >
+      <div id="home" className=" w-full h-screen" >
         <HomePage />
       </div>
       <div id="about" className="pt-[5rem] w-full h-screen">
