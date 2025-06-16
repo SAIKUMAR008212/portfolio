@@ -51,7 +51,7 @@ export default function HomePage() {
               View Projects
             </Button>
           </Link>
-          <Link href="/contact">
+          <Link href="#contact">
             <Button
               variant="outline"
               size="lg"
