@@ -1,7 +1,7 @@
+"use client"
+
 import React from 'react'
 import { Button } from '../ui/button'
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '../ui/dropdown-menu'
-import { Menu } from 'lucide-react'
 import Link from 'next/link'
 import Mobilesheet from './Mobilesheet'
 import { ModeToggle } from '../ui/modetoggle'
@@ -27,36 +27,9 @@ export default function Nav() {
                     </a>
                     <ModeToggle />
                 </div>
-                <div className="md:hidden">
-                    <DropdownMenu>
-                        <DropdownMenuTrigger asChild>
-                            <Button variant="ghost" size="icon" aria-label="Open menu">
-                                <Menu className="w-6 h-6" />
-                            </Button>
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent align="end">
-                            <DropdownMenuItem asChild>
-                                <Link href="/">Home</Link>
-                            </DropdownMenuItem>
-                            <DropdownMenuItem asChild>
-                                <Link href="/about">About</Link>
-                            </DropdownMenuItem>
-                            <DropdownMenuItem asChild>
-                                <Link href="/projects">Projects</Link>
-                            </DropdownMenuItem>
-                            <DropdownMenuItem asChild>
-                                <Link href="#skills">Skills</Link>
-                            </DropdownMenuItem>
-                            <DropdownMenuItem asChild>
-                                <Link href="/contact">Contact</Link>
-                            </DropdownMenuItem>
-                            <DropdownMenuItem asChild>
-                                <Button variant="outline">
-                                    Resume
-                                </Button>
-                            </DropdownMenuItem>
-                        </DropdownMenuContent>
-                    </DropdownMenu>
+                <div className="md:hidden flex items-center gap-2">
+                    <ModeToggle />
+                    <Mobilesheet />
                 </div>
             </div>
         </nav>

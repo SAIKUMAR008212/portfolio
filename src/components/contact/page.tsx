@@ -1,5 +1,5 @@
 import React from 'react'
-import { Linkedin, Github, Twitter, Instagram, MessageCircle } from 'lucide-react'
+import { Linkedin, Github,  Instagram, MessageCircle } from 'lucide-react'
 
 export default function Contact() {
   const socialLinks = [
@@ -12,11 +12,6 @@ export default function Contact() {
       icon: Github,
       href: "https://github.com/saikumarkannuru",
       label: "GitHub"
-    },
-    {
-      icon: Twitter,
-      href: "https://twitter.com/saikumarkannuru",
-      label: "Twitter"
     },
     {
       icon: Instagram,
@@ -55,9 +50,9 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.label}
-                className="group p-4 bg-gray-800/50 hover:bg-gray-700/50 rounded-2xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-emerald-500/10"
+                className="group p-4 bg-black-300/50 hover:bg-gray-300/10 rounded-2xl border border-blue-100/10 hover:border-blue-800/80 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-emerald-100/10"
               >
-                <IconComponent className="w-3 h-3 md:w-4 md:h-4 text-gray-400 group-hover:text-emerald-400 transition-colors duration-300" />
+                <IconComponent className="w-3 h-3 md:w-6 md:h-5 text-blue-1000 group-black:text-emerald-400 transition-colors duration-300" />
               </a>
             )
           })}
