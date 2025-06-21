@@ -31,7 +31,7 @@ const projects = [
 export default function Project() {
 	return (
 		<section className="py-12 px-4 max-w-4xl mx-auto">
-			<h2 className="text-5xl font-bold mb-6 text-center">Projects</h2>
+			<h2 className="text-4xl text-blue-600 font-bold mb-6 text-center">Projects</h2>
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 				{projects.map((project, idx) => (
 					<div
