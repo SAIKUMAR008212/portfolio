@@ -20,7 +20,7 @@ export default function Skills() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
+          <h1 className="text-3xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
             <span className="text-black-500 dark:text-white">Skills</span> & <span className="text-blue-900">Technologies</span>
           </h1>
           <p className="text-xl text-gray-220 max-w-2xl mx-auto">
