@@ -21,14 +21,14 @@ export default function Home() {
        <div id="skills" className="pt-[5rem] w-full h-full ">
         <Skills />
       </div>
-      <div id="projects" className="pt-[5rem] w-full h-full">
+      <div id="Projects" className="pt-[5rem] w-full h-full">
         <Project/>
+      </div>
+      <div id="services" className="pt-[5rem] w-full h-full ">
+      <Services />
       </div>
       <div id="contact" className="pt-[5rem] w-full h-full ">
       <Contact />
-      </div>
-      <div id="contact" className="pt-[5rem] w-full h-full ">
-      <Services />
       </div>
      
     </div>

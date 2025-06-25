@@ -16,7 +16,7 @@ const skills = [
 ]
 export default function Skills() {
   return (
-    <section className="min-h-screen bg-gray-10 py-16 px-4">
+    <section className="bg-gray-10 py-9 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -29,15 +29,15 @@ export default function Skills() {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        <div className=" flex flex-wrap  gap-4">
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="  backdrop-blur-md rounded-md p-2 shadow-sm border border-gray-400 dark:border-gray-800 hover:shadow-md hover:scale-105 transition-all duration-300 cursor-pointer group"
+              className=" min-w-48  bg-primary/10  flex-1  backdrop-blur-md rounded-md p-4 shadow-sm border border-gray-400 dark:border-gray-800 hover:shadow-md hover:scale-105 transition-all duration-300 cursor-pointer group"
             >
 
               <div
-                className="  rounded-xl flex items-center justify-center  overflow-hidden gap-2"
+                className="   rounded-xl flex items-center justify-center  overflow-hidden gap-2"
 
               >
                 <img
@@ -45,7 +45,7 @@ export default function Skills() {
                   alt={skill.name}
                   className="w-8 h-9 object-contain"
                 />
-                <h3 className=" font-semibold text-sm dark:text-white group-hover:text-indigo-800 transition-colors dark:group-hover:text-indigo-400 text-gray-800 dark:text-black">
+                <h3 className=" font-semibold text-sm text-foreground dark:text-white group-hover:text-indigo-900 transition-colors dark:group-hover:text-indigo-400  dark:text-black">
                   {skill.name}
                 </h3>
               </div>

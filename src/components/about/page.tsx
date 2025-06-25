@@ -15,7 +15,7 @@ export default function About() {
 
       {/* Right: About Me Content */}
       <div className="max-w-xl text-center md:text-left">
-        <h2 className="text-3xl md:text-5xl text-left font-bold text-primary mb-4">About Me</h2>
+        <h2 className="text-3xl md:text-5xl md:text-left font-bold text-center text-primary mb-4">About Me</h2>
         <p className="text-lg md:text-xl text-white-400 mb-4">
           Hello! I'm <span className="font-semibold">Saikumar Kannuru</span>, A curious and driven Full-Stack Developer from Andhra Pradesh, currently pursuing my B.Tech in Computer Science & Data Science. I’m passionate about building responsive web applications that are both functional and visually engaging.
         </p>

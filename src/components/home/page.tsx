@@ -46,7 +46,7 @@ export default function HomePage() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 mt-8">
-          <Link href="#projects">
+          <Link href="#Projects">
             <Button size="lg" variant={'default'} className="font-semibold text-foreground shadow-md transition-transform hover:scale-105">
               View Projects
             </Button>

@@ -34,7 +34,7 @@ export default function Mobilesheet() {
             <Link href="#skills" className="hover:text-primary transition-colors w-full text-center">Skills</Link>
           </DrawerClose>
           <DrawerClose asChild>
-            <Link href="#projects" className="hover:text-primary transition-colors w-full text-center">Projects</Link>
+            <Link href="#Projects" className="hover:text-primary transition-colors w-full text-center">Projects</Link>
           </DrawerClose>
           <DrawerClose asChild>
             <Link href="#contact" className="hover:text-primary transition-colors w-full text-center">Contact</Link>
