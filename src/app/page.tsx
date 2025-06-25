@@ -6,6 +6,7 @@ import Project from "@/components/project/page";
 import { ModeToggle } from "@/components/ui/modetoggle";
 import Image from "next/image";
 import Skills from "@/components/skills/page";
+import Services from "@/components/services/page";
 
 export default function Home() {
   return (
@@ -24,7 +25,10 @@ export default function Home() {
         <Project/>
       </div>
       <div id="contact" className="pt-[5rem] w-full h-full ">
-<Contact />
+      <Contact />
+      </div>
+      <div id="contact" className="pt-[5rem] w-full h-full ">
+      <Services />
       </div>
      
     </div>

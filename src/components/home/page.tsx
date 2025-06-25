@@ -8,7 +8,7 @@ import { ContainerTextFlip } from '../ui/container-text-flip'
 
 export default function HomePage() {
   return (
-    <div className="relative flex h-full min-h-screen w-full items-center justify-center bg-white dark:bg-black overflow-hidden">
+    <div className="relative flex h-fit min-h-screen w-full items-center justify-center bg-white dark:bg-black overflow-hidden">
       {/* Background grid */}
       <div
         className={cn(
