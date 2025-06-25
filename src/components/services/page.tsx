@@ -77,7 +77,7 @@ const services = [
 export default function Services() {
   return (
     <div>
-      <div className=" mx-auto max-w-6xl rounded-md flex flex-col antialiased bg-background items-center justify-center relative overflow-hidden">
+      <div className=" mx-auto max-w-8xl rounded-md flex flex-col antialiased bg-background items-center justify-center relative overflow-hidden">
         {/* <h1 className="text-primary text-3xl font-bold">Services</h1> */}
         <p className="text-3xl md:text-3xl font-bold text-primary mb-4">What I can do for you</p>
         <InfiniteMovingCards

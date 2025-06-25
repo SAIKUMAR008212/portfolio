@@ -1,73 +1,52 @@
-import React from 'react'
-import { Button } from '../ui/button'
+// Project.tsx
 
-const projects = [
-	{
-		title: 'DEVORBIT',
-		description:
-			'Devorbit is a simple and easy-to-use platform that provides YouTube videos and PDFs for learning web development. It helps users quickly find useful resources for frontend, backend, and full-stack topics.',
-		demo: 'https://your-portfolio-demo.com',
-		github: 'https://github.com/yourusername/portfolio',
-		image: '/project-1.png',
-	},
+import React from 'react';
+import { StickyScroll } from '../ui/sticky-scroll-reveal';
+
+const content = [
   {
-		title: 'MUSIC RECOMENDATION SYSTEM',
-		description:
-			'A full-stack task management app with authentication, built using MERN stack and styled with Tailwind CSS.',
-		demo: 'https://your-taskmanager-demo.com',
-		github: 'https://github.com/yourusername/taskmanager',
-		image: '/mongo-db.png',
-	},
-	{
-		title: 'NOTEPAD ',
-		description:
-			'A full-stack task management app with authentication, built using MERN stack and styled with Tailwind CSS.',
-		demo: 'https://your-taskmanager-demo.com',
-		github: 'https://github.com/yourusername/taskmanager',
-		image: '/public/mongo-db.png',
-	},
-]
+    title: "Devorbit",
+    description:
+      "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+    content: (
+      <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
+        Collaborative Editing
+      </div>
+    ),
+  },
+  {
+    title: "music recommendation system",
+    description:
+      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+    content: (
+      <div className="flex h-full w-full items-center justify-center text-white">
+        <img
+          src="/linear.webp"
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="linear board demo"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Version control",
+    description:
+      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    content: (
+      <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] text-white">
+        Version control
+      </div>
+    ),
+  },
+  
+];
 
 export default function Project() {
-	return (
-		<section className="py-12 px-4 max-w-4xl mx-auto">
-			<h2 className="text-4xl text-blue-600 font-bold mb-6 text-center">Projects</h2>
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-				{projects.map((project, idx) => (
-					<div
-						key={idx}
-						className="bg-card rounded-xl shadow-lg p-6 flex flex-col items-center border border-border"
-					>
-						<img
-							src={project.image}
-							alt={project.title}
-							className="w-20 h-20 object-contain mb-4 rounded"
-						/>
-						<h3 className="text-xl font-semibold mb-2 text-center">
-							{project.title}
-						</h3>
-						<p className="text-muted-foreground mb-6 text-center">
-							{project.description}
-						</p>
-						<div className="flex gap-4 mt-auto">
-							<a
-								href={project.demo}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<Button variant="default">Demo</Button>
-							</a>
-							<a
-								href={project.github}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<Button variant="outline">CODE</Button>
-							</a>
-						</div>
-					</div>
-				))}
-			</div>
-		</section>
-	)
+  return (
+    <div className="w-full py-4">
+      <StickyScroll content={content} />
+    </div>
+  );
 }

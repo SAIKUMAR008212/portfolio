@@ -24,85 +24,60 @@ export const InfiniteMovingCards = ({
   className?: string;
 }) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
-  const scrollerRef = React.useRef<HTMLUListElement>(null);
 
-  const [start, setStart] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    addAnimation();
-
-    // Detect desktop
     const handleResize = () => {
       setIsDesktop(window.innerWidth > 768);
     };
-    handleResize(); // initial
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  function addAnimation() {
-    if (containerRef.current && scrollerRef.current) {
-      const scrollerContent = Array.from(scrollerRef.current.children);
-      scrollerContent.forEach((item) => {
-        const duplicatedItem = item.cloneNode(true);
-        scrollerRef.current?.appendChild(duplicatedItem);
-      });
+  useEffect(() => {
+    if (containerRef.current) {
+      containerRef.current.style.setProperty(
+        "--animation-direction",
+        direction === "left" ? "forwards" : "reverse"
+      );
 
-      getDirection();
-      getSpeed();
-      setStart(true);
+      const duration =
+        speed === "fast" ? "20s" : speed === "normal" ? "40s" : "80s";
+      containerRef.current.style.setProperty("--animation-duration", duration);
     }
-  }
-
-  const getDirection = () => {
-    containerRef.current?.style.setProperty(
-      "--animation-direction",
-      direction === "left" ? "forwards" : "reverse"
-    );
-  };
-
-  const getSpeed = () => {
-    const duration =
-      speed === "fast" ? "20s" : speed === "normal" ? "40s" : "80s";
-    containerRef.current?.style.setProperty("--animation-duration", duration);
-  };
+  }, [direction, speed]);
 
   const handleTap = () => {
-    if (!isDesktop) {
-      setIsPaused((prev) => !prev); // Mobile: tap to toggle
-    }
+    if (!isDesktop) setIsPaused((prev) => !prev);
   };
 
   const handleMouseEnter = () => {
-    if (isDesktop) {
-      setIsPaused(true); // Desktop: hover pause
-    }
+    if (isDesktop) setIsPaused(true);
   };
 
   const handleMouseLeave = () => {
-    if (isDesktop) {
-      setIsPaused(false); // Desktop: resume on leave
-    }
+    if (isDesktop) setIsPaused(false);
   };
 
   return (
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20 max-w-7xl overflow-hidden",
+        "[mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
       )}
     >
       <ul
-        ref={scrollerRef}
         className={cn(
           "flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-4 animate-scroll",
           isPaused && "paused"
         )}
       >
-        {items.map((item, idx) => (
+        {[...items, ...items].map((item, idx) => (
           <li
             key={idx}
             onClick={handleTap}
