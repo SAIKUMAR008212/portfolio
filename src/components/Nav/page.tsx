@@ -17,8 +17,8 @@ export default function Nav() {
                     <Link href="#about" className="hover:text-primary transition-colors">About</Link>
                     <Link href="#skills" className="hover:text-primary transition-colors">Skills</Link>
                     <Link href="#Projects" className="hover:text-primary transition-colors">Projects</Link>
-                    <Link href="#contact" className="hover:text-primary transition-colors">Contact</Link>
                     <Link href="#services" className="hover:text-primary transition-colors">Services</Link>
+                    <Link href="#contact" className="hover:text-primary transition-colors">Contact</Link>
                     <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
                         <Button variant="outline" size="icon" className="ml-2" aria-label="Resume">
                             <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

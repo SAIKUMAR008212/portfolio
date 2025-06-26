@@ -1,66 +1,67 @@
-// Project.tsx
-
 import React from 'react';
 import { StickyScroll } from '../ui/sticky-scroll-reveal';
 
 const content = [
   {
-    title: " Devorbit text",
-    description:
-      "A modern task management and productivity platform developed using the MERN stack (MongoDB, Express, React, Node.js). This project allows users to register, create tasks, track progress, and manage deadlines in a clean and responsive UI. Integrated JWT-based authentication and RESTful APIs for secure user access. Styled with Tailwind CSS for a sleek design.",
-    content: (
-      <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
-        <img
-          src="Devorbit.png"
-          width={300}
-          height={300}
-          className="h-full w-full object-cover"
-          alt="linear board demo"
-        />
-        
-      </div>
+    title: "Devorbit",
+    description: (
+      <p>
+        A task management platform built with MERN stack (MongoDB, Express, React, Node.js). Includes features like user authentication with JWT, task creation, and deadline tracking. Styled with Tailwind CSS for a clean interface.
+      </p>
     ),
-  },
-  {
-    title: "music recommendation system",
-    description:
-      "An intelligent web app that suggests music based on user preferences using machine learning. Built with React (Vite) on the frontend and a Flask (Python) backend with KNN and data from a CSV dataset. Clean UI with Tailwind CSS and real-time recommendations via REST APIs.See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
     content: (
-      <div className="flex h-full w-full items-center justify-center text-white">
+      <div className="flex flex-col items-center justify-center h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white p-4">
+        <h2 className="text-xl font-bold mb-2 text-center">Devorbit</h2>
         <img
-          src="/linear.webp"
-          width={300}
-          height={300}
-          className="h-full w-full object-cover"
-          alt="linear board demo"
+          src="devorbit.png"
+          alt="Devorbit demo"
+          className="w-full h-full object-cover rounded"
         />
       </div>
     ),
   },
   {
-    title: "Version control",
-    description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    title: "Music Recommendation System",
+    description: (
+      <p>
+        Built with React (Vite) and Flask (Python), this ML-powered app uses the KNN algorithm to recommend songs based on user preferences from a CSV dataset. Real-time responses via REST APIs and styled with Tailwind.
+      </p>
+    ),
     content: (
-      <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] text-white">
+      <div className="flex flex-col items-center justify-center h-full w-full bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-4">
+        <h2 className="text-xl font-bold mb-2 text-center">Music Recommendation</h2>
         <img
           src="/linear.webp"
-          width={300}
-          height={300}
-          className="h-full w-full object-cover"
-          alt="linear board demo"
+          alt="Music Recommendation demo"
+          className="w-full h-full object-cover rounded"
         />
       </div>
     ),
   },
-  
+  {
+    title: "Version Control Panel",
+    description: (
+      <p>
+        A collaborative platform to monitor and maintain the latest version of any project with real-time updates. No more merge conflicts — just clean, automatic version syncing.
+      </p>
+    ),
+    content: (
+      <div className="flex flex-col items-center justify-center h-full w-full bg-gradient-to-br from-orange-500 to-yellow-400 text-white p-4">
+        <h2 className="text-xl font-bold mb-2 text-center">Version Control</h2>
+        <img
+          src="/linear.webp"
+          alt="Version Control demo"
+          className="w-full h-full object-cover rounded"
+        />
+      </div>
+    ),
+  },
 ];
 
 export default function Project() {
   return (
     <div className="w-full py-4">
-    <p className="text-3xl md:text-5xl text-center font-bold text-primary mb-4">Projects</p>
-
+      <p className="text-3xl md:text-5xl text-center font-bold text-primary mb-4">Projects</p>
       <StickyScroll content={content} />
     </div>
   );
