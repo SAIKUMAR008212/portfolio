@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import { useMotionValueEvent, useScroll } from "framer-motion"; // Use correct package
-import { motion } from "framer-motion";
+import { useMotionValueEvent, useScroll, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export const StickyScroll = ({
@@ -34,7 +33,7 @@ export const StickyScroll = ({
         const distance = Math.abs(latest - breakpoint);
         return distance < Math.abs(latest - cardsBreakpoints[acc]) ? index : acc;
       },
-      0,
+      0
     );
     setActiveCard(closestBreakpointIndex);
   });
@@ -55,13 +54,13 @@ export const StickyScroll = ({
               >
                 {item.title}
               </motion.h2>
-              <motion.p
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: activeCard === index ? 1 : 0.3 }}
                 className="text-kg mt-10 max-w-sm text-muted-foreground"
               >
                 {item.description}
-              </motion.p>
+              </motion.div>
             </div>
           ))}
           <div className="h-40" />
@@ -70,7 +69,7 @@ export const StickyScroll = ({
       <div
         className={cn(
           "sticky top-10 hidden h-60 w-80 overflow-hidden rounded-md lg:block",
-          contentClassName,
+          contentClassName
         )}
       >
         {content[activeCard].content ?? null}

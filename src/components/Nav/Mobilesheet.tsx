@@ -39,7 +39,7 @@ export default function Mobilesheet() {
           <DrawerClose asChild>
             <Link href="#contact" className="hover:text-primary transition-colors w-full text-center">Contact</Link>
           </DrawerClose>
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="w-full flex justify-center">
+          <a href="https://drive.google.com/file/d/1aBgas81uiIVZOM4LAXtjgRuAx6qQeVD9/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="w-full flex justify-center">
             <Button variant="outline" className="w-full">Resume</Button>
           </a>
         </nav>

@@ -1,21 +1,36 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import { StickyScroll } from '../ui/sticky-scroll-reveal';
+import { FaGithub } from 'react-icons/fa'; // Import GitHub icon
 
 const content = [
   {
     title: "Devorbit",
     description: (
-      <p>
-        A task management platform built with MERN stack (MongoDB, Express, React, Node.js). Includes features like user authentication with JWT, task creation, and deadline tracking. Styled with Tailwind CSS for a clean interface.
-      </p>
+      <div>
+        <p>
+          A task management platform built with the MERN stack (MongoDB, Express, React, Node.js).
+          Includes features like user authentication with JWT, task creation, and deadline tracking.
+          Styled with Tailwind CSS for a clean interface.
+        </p>
+        <a
+          href="https://github.com/SAIKUMAR008212/devorbit"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 text-blue-400 mt-2 hover:underline"
+        >
+          <FaGithub /> Code on GitHub
+        </a>
+      </div>
     ),
     content: (
-      <div className="flex flex-col items-center justify-center h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white p-4">
+      <div className="flex flex-col items-center justify-center h-full w-full text-white p-4">
         <h2 className="text-xl font-bold mb-2 text-center">Devorbit</h2>
         <img
-          src="devorbit.png"
+          src="/devorbit.png"
           alt="Devorbit demo"
-          className="w-full h-full object-cover rounded"
+          className="w-full h-full object-contain rounded"
         />
       </div>
     ),
@@ -23,35 +38,29 @@ const content = [
   {
     title: "Music Recommendation System",
     description: (
-      <p>
-        Built with React (Vite) and Flask (Python), this ML-powered app uses the KNN algorithm to recommend songs based on user preferences from a CSV dataset. Real-time responses via REST APIs and styled with Tailwind.
-      </p>
-    ),
-    content: (
-      <div className="flex flex-col items-center justify-center h-full w-full bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-4">
-        <h2 className="text-xl font-bold mb-2 text-center">Music Recommendation</h2>
-        <img
-          src="/linear.webp"
-          alt="Music Recommendation demo"
-          className="w-full h-full object-cover rounded"
-        />
+      <div>
+        <p>
+          Built with React (Vite) and Flask (Python), this ML-powered app uses the KNN algorithm
+          to recommend songs based on user preferences from a CSV dataset. Real-time responses via
+          REST APIs and styled with Tailwind.
+        </p>
+        <a
+          href="https://github.com/SAIKUMAR008212/music-recommendation-system"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 text-blue-400 mt-2 hover:underline"
+        >
+          <FaGithub /> Code on GitHub
+        </a>
       </div>
     ),
-  },
-  {
-    title: "Version Control Panel",
-    description: (
-      <p>
-        A collaborative platform to monitor and maintain the latest version of any project with real-time updates. No more merge conflicts — just clean, automatic version syncing.
-      </p>
-    ),
     content: (
-      <div className="flex flex-col items-center justify-center h-full w-full bg-gradient-to-br from-orange-500 to-yellow-400 text-white p-4">
-        <h2 className="text-xl font-bold mb-2 text-center">Version Control</h2>
+      <div className="flex flex-col items-center justify-center h-full w-full text-white p-4">
+        <h2 className="text-xl font-bold mb-2 text-center">Music Recommendation</h2>
         <img
-          src="/linear.webp"
-          alt="Version Control demo"
-          className="w-full h-full object-cover rounded"
+          src="/music.png"
+          alt="Music Recommendation demo"
+          className="w-full h-full object-contain rounded"
         />
       </div>
     ),
@@ -59,6 +68,14 @@ const content = [
 ];
 
 export default function Project() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return null;
+
   return (
     <div className="w-full py-4">
       <p className="text-3xl md:text-5xl text-center font-bold text-primary mb-4">Projects</p>

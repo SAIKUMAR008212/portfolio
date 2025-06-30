@@ -19,10 +19,10 @@ export default function Nav() {
                     <Link href="#Projects" className="hover:text-primary transition-colors">Projects</Link>
                     <Link href="#services" className="hover:text-primary transition-colors">Services</Link>
                     <Link href="#contact" className="hover:text-primary transition-colors">Contact</Link>
-                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                    <a href="https://drive.google.com/file/d/1aBgas81uiIVZOM4LAXtjgRuAx6qQeVD9/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                         <Button variant="outline" size="icon" className="ml-2" aria-label="Resume">
                             <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11V17M12 17L9 14M12 17l3-3M5 7h14M5 7V5a2 2 0 012-2h10a2 2 0 012 2v2" />
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11V17M12 17L9 14M12 17l3-3M5 7h14M5 7V5a2 2 0 012-2h10a2 2 0 012 2v2"/>
                             </svg>
                         </Button>
                     </a>
