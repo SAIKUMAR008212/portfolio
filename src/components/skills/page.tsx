@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const skills = [
@@ -40,12 +41,14 @@ export default function Skills() {
                 className="   rounded-xl flex items-center justify-center  overflow-hidden gap-2"
 
               >
-                <img
+                <Image
                   src={skill.icon}
                   alt={skill.name}
                   className="w-8 h-9 object-contain"
+                  height={100}
+                  width={100}
                 />
-                <h3 className=" font-semibold text-sm text-foreground dark:text-white group-hover:text-indigo-900 transition-colors dark:group-hover:text-indigo-400  dark:text-black">
+                <h3 className=" font-semibold text-sm text-foreground dark:text-white group-hover:text-indigo-900 transition-colors dark:group-hover:text-indigo-400">
                   {skill.name}
                 </h3>
               </div>

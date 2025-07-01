@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { StickyScroll } from '../ui/sticky-scroll-reveal';
 import { FaGithub } from 'react-icons/fa'; // Import GitHub icon
+import Image from 'next/image';
 
 const content = [
   {
@@ -27,9 +28,11 @@ const content = [
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full text-white p-4">
         <h2 className="text-xl font-bold mb-2 text-center">Devorbit</h2>
-        <img
+        <Image
           src="/devorbit.png"
           alt="Devorbit demo"
+          width={400}
+          height={200}
           className="w-full h-full object-contain rounded"
         />
       </div>
@@ -57,10 +60,12 @@ const content = [
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full text-white p-4">
         <h2 className="text-xl font-bold mb-2 text-center">Music Recommendation</h2>
-        <img
+    <Image
           src="/music.png"
           alt="Music Recommendation demo"
           className="w-full h-full object-contain rounded"
+          width={400}
+          height={200}
         />
       </div>
     ),

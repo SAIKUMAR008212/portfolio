@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 export default function About() {
@@ -5,9 +6,10 @@ export default function About() {
     <div className="min-h-[70vh] flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 px-6 py-12 bg-background">
       {/* Left: Image/Illustration */}
       <div className="w-84 h-74 md:w-80 md:h-60 rounded-3xl overflow-hidden shadow-2xl flex items-center justify-center bg-gradient-to-tr from-primary/10 to-secondary/10 border-4 border-primary/20">
-        <img
-          src="20250116_103004.jpg"
+        <Image
+          src="/20250116_103004.jpg"
           alt="About Me"
+          height={400} width={400}
           className="object-cover w-full h-full transition-transform duration-200 hover:scale-105"
           style={{ objectPosition: 'center top' }}
         />
