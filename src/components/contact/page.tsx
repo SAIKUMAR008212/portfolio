@@ -38,7 +38,7 @@ export default function Contact() {
     <section className="min-h-[60vh] flex items-center justify-center bg-background px-4 py-12">
       <div className="text-center max-w-4xl mx-auto flex flex-col items-center">
         <h2 className="text-4xl md:text-3xl font-bold mb-4">
-          <span className="text-primary">Let's </span>
+          <span className="text-primary">Let&apos;s </span>
           <span className="text-primary relative">
             Connect
             <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary rounded-full"></div>
@@ -46,7 +46,7 @@ export default function Contact() {
         </h2>
 
         <p className="text-muted-foreground text-lg md:text-x2 mb-12 max-w-2xl mx-auto leading-relaxed">
-          Feel free to reach out through any of these platforms. I'll get back to you as soon as possible.
+          Feel free to reach out through any of these platforms. I&apos;ll get back to you as soon as possible.
         </p>
 
         <FloatingDock

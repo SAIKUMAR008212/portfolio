@@ -34,7 +34,7 @@ export default function HomePage() {
         />
 
         <h1 className="text-2xl sm:text-4xl md:text-4xl font-extrabold">
-          <span className="text-primary">Hi, I'm Saikumar Kannuru</span> — I don't just write code,
+          <span className="text-primary">Hi, I&apos;m Saikumar Kannuru</span> — I don&apos;t just write code,
           <br className="hidden md:block" />
           <span className="text-primary"> I craft digital experiences.</span>
         </h1>

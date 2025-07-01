@@ -3,8 +3,6 @@ import Contact from "@/components/contact/page";
 import HomePage from "@/components/home/page";
 import Nav from "@/components/Nav/page";
 import Project from "@/components/project/page";
-import { ModeToggle } from "@/components/ui/modetoggle";
-import Image from "next/image";
 import Skills from "@/components/skills/page";
 import Services from "@/components/services/page";
 
